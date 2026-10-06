@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Words in Context – SAT Çalışma Merkezi</title>
+<style>
+:root{--bg:#f6f4ff;--card:#fff;--ink:#1d1b2e;--mut:#6b6880;--pri:#6c4cf5;--pri2:#a24cf5;--ok:#13a86b;--bad:#e5484d;--line:#e4e0f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12101f;--card:#1c1930;--ink:#efecff;--mut:#9c98b8;--line:#2f2b4a}}
+:root[data-theme="dark"]{--bg:#12101f;--card:#1c1930;--ink:#efecff;--mut:#9c98b8;--line:#2f2b4a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+header{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;border-radius:20px;padding:24px 20px;margin-bottom:14px}
+header h1{margin:0 0 4px;font-size:1.6rem}header p{margin:0;opacity:.9}
+nav{display:flex;gap:8px;margin-bottom:14px}
+nav button{flex:1;padding:11px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;font-weight:600;font-size:.95rem;cursor:pointer}
+nav button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+h2{margin:0 0 8px;font-size:1.15rem}h3{margin:0 0 6px;font-size:1rem}
+.tag{display:inline-block;background:var(--pri);color:#fff;border-radius:99px;font-size:.72rem;padding:2px 10px;margin-bottom:6px}
+.mut{color:var(--mut);font-size:.9rem}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;font-size:1rem;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:rgba(19,168,107,.14)}.opt.bad{border-color:var(--bad);background:rgba(229,72,77,.14)}
+.exp{margin-top:10px;padding:12px;border-radius:12px;background:rgba(108,76,245,.1);display:none}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin:6px 0 12px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--pri2));transition:width .3s}
+.btn{padding:12px 18px;border:0;border-radius:12px;background:var(--pri);color:#fff;font-weight:600;font-size:1rem;cursor:pointer}
+.fc{perspective:800px;cursor:pointer;margin:10px 0}.fc div{min-height:130px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-size:1.25rem;font-weight:600}
+.fc .back{font-size:1rem;font-weight:400}
+ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><h1>📘 Words in Context</h1><p>SAT Reading &amp; Writing • strateji, kelime kartları ve pratik</p></header>
+<nav><button class="on" data-t="learn">Öğren</button><button data-t="cards">Kartlar</button><button data-t="quiz">Pratik</button></nav>
 
+<section id="learn">
+<div class="card"><span class="tag">Bu nedir?</span><h2>Soru tipi</h2>
+<p>Bir paragrafta boşluk bırakılır ya da altı çizili bir kelime verilir. En mantıklı, bağlama en uygun kelimeyi seçersin. Kelimeyi bilmek yetmez; <b>cümlenin yönünü</b> okumak gerekir.</p></div>
+<div class="card"><h2>4 adımlı yöntem</h2><ul>
+<li><b>1. Seçeneklere bakmadan oku.</b> Boşluğa kendi kelimeni koy ("olumlu mu, olumsuz mu?").</li>
+<li><b>2. İpuçlarını bul.</b> Metinde boşluğu tanımlayan bir örnek, zıtlık ya da neden-sonuç vardır.</li>
+<li><b>3. Elemeye başla.</b> Tonu veya anlamı uymayan seçenekleri at.</li>
+<li><b>4. Cümleye geri koy.</b> Kalan seçeneği yerine yerleştirip akıp akmadığını kontrol et.</li></ul></div>
+<div class="card"><h2>Bağlaç ipuçları</h2>
+<p><b>Zıtlık:</b> <i>but, although, though, however, yet, despite</i> → boşluk, önceki fikrin tersidir.</p>
+<p><b>Devam:</b> <i>and, moreover, because, thus, therefore</i> → boşluk, aynı yönde ilerler.</p>
+<p><b>İki nokta / tire:</b> sonrasında genelde tanım gelir; kelimenin anlamını orada ara.</p></div>
+<div class="card"><h2>Sık yapılan hatalar</h2><ul>
+<li>Bildiğin ama bağlama uymayan "havalı" kelimeyi seçmek.</li>
+<li>Kelimenin yaygın anlamına takılmak; çok anlamlı kelimelerde bağlama bak.</li>
+<li>Tonu kaçırmak (övgü mü eleştiri mi?).</li></ul></div>
+</section>
+
+<section id="cards" class="hide">
+<div class="card"><span class="tag">Kelime kartı</span>
+<p class="mut" id="cnt"></p>
+<div class="fc" id="fc"><div id="face"></div></div>
+<p class="mut">Çevirmek için karta dokun.</p>
+<button class="btn" id="nx">Sonraki kart</button></div>
+</section>
+
+<section id="quiz" class="hide">
+<div class="card"><div class="bar"><i id="pb"></i></div><div id="q"></div></div>
+</section>
+</div>
+
+<script>
+const words=[
+["corroborate","doğrulamak, kanıtlarla desteklemek"],["spare","sade, süssüz (üslup)"],["tepid","ılık; isteksiz, heyecansız"],
+["precarious","sallantıda, kararsız, riskli"],["anomalous","normdan sapan, alışılmadık"],["restraint","ölçülülük, tutumluluk"],
+["disjointed","bağlantısız, kopuk"],["guarded","temkinli, dikkatli konuşan"],["ostentatious","gösterişli"],
+["candid","açık sözlü, samimi"],["undermine","altını oymak, zayıflatmak"],["ornate","süslü, bezemeli"]];
+const Q=[
+{t:"Initially, the scientist's findings were met with skepticism, but later experiments ______ her hypothesis, leaving few doubters.",o:["undermined","corroborated","obscured","postponed"],a:1,e:"\"Leaving few doubters\" ve \"but\" ipucu: sonraki deneyler hipotezi destekledi. <b>Corroborated</b> = doğruladı."},
+{t:"Although the author's early novels were praised for their ______ prose, her later work embraced a far more ornate style.",o:["spare","elaborate","florid","turbid"],a:0,e:"\"Although\" zıtlık kurar; sonrası \"ornate\" olduğu için ilki tersi olmalı: <b>spare</b> (sade)."},
+{t:"The mayor's ______ response to the crisis, delaying any action for weeks, frustrated residents.",o:["decisive","tepid","fervent","prompt"],a:1,e:"Haftalarca harekete geçmemek, isteksiz bir tepkiyi gösterir: <b>tepid</b>."},
+{t:"The botanist described the orchid's habitat as \"precarious,\" noting that a single drought could eliminate the entire population. As used in the text, \"precarious\" most nearly means",o:["unstable","remote","spacious","ancient"],a:0,e:"Tek bir kuraklık türü yok edebiliyorsa yaşam alanı kırılgandır: <b>unstable</b>."},
+{t:"Because the experiment's results were ______, other laboratories could not reproduce them, which cast doubt on the claim.",o:["replicable","anomalous","conclusive","redundant"],a:1,e:"Tekrar edilememesi sonuçların alışılmadık/sapmalı olduğunu gösterir: <b>anomalous</b>."},
+{t:"The architect's design was praised not for ostentation but for its ______: every element served a clear purpose.",o:["extravagance","restraint","novelty","fragility"],a:1,e:"\"Not for ostentation\" + iki nokta sonrası amaç odaklılık: <b>restraint</b> (ölçülülük)."},
+{t:"Critics found the film's plot ______: scenes ended abruptly, and characters vanished without explanation.",o:["cohesive","disjointed","intricate","predictable"],a:1,e:"İki nokta sonrası kopukluğu anlatır: <b>disjointed</b>."},
+{t:"The diplomat's ______ remarks, worded carefully to offend no one, revealed little about her country's true position.",o:["candid","guarded","inflammatory","verbose"],a:1,e:"Dikkatle seçilmiş ve az şey açığa çıkaran sözler: <b>guarded</b>."}
+];
+// tabs
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));
+ ["learn","cards","quiz"].forEach(id=>document.getElementById(id).classList.toggle("hide",id!==b.dataset.t));
+});
+// flashcards
+let ci=0,flip=false;
+function card(){const w=words[ci];const f=document.getElementById("face");
+ f.className=flip?"back":"";f.textContent=flip?w[1]:w[0];
+ document.getElementById("cnt").textContent=(ci+1)+" / "+words.length}
+document.getElementById("fc").onclick=()=>{flip=!flip;card()};
+document.getElementById("nx").onclick=()=>{ci=(ci+1)%words.length;flip=false;card()};
+card();
+// quiz
+let qi=0,score=0,done=false;
+function show(){
+ const box=document.getElementById("q");
+ document.getElementById("pb").style.width=(qi/Q.length*100)+"%";
+ if(qi>=Q.length){box.innerHTML="<h2>Bitti! 🎉</h2><p>Skor: <b>"+score+" / "+Q.length+"</b></p><p class='mut'>"+(score>=7?"Harika, bağlam okuma becerin güçlü.":score>=4?"İyi gidiyorsun; yanlışların açıklamalarını tekrar oku.":"Strateji sekmesine dönüp 4 adımı tekrar dene.")+"</p><button class='btn' id='rs'>Tekrar dene</button>";
+  document.getElementById("rs").onclick=()=>{qi=0;score=0;show()};return}
+ done=false;const q=Q[qi];
+ box.innerHTML="<span class='tag'>Soru "+(qi+1)+"/"+Q.length+"</span><p>"+q.t+"</p>"+q.o.map((x,i)=>"<button class='opt' data-i='"+i+"'>"+"ABCD"[i]+") "+x+"</button>").join("")+"<div class='exp' id='ex'>"+q.e+"</div><p><button class='btn hide' id='nq'>Devam</button></p>";
+ box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+  if(done)return;done=true;const i=+b.dataset.i;
+  if(i===q.a)score++;
+  box.querySelectorAll(".opt").forEach((x,j)=>{if(j===q.a)x.classList.add("ok");else if(j===i)x.classList.add("bad")});
+  document.getElementById("ex").style.display="block";
+  const n=document.getElementById("nq");n.classList.remove("hide");n.onclick=()=>{qi++;show()};
+ });
+}
+show();
+</script>
+</body>
+</html>
