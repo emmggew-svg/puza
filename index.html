@@ -1,119 +1,179 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Words in Context – SAT Çalışma Merkezi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Words in Context: A Study Guide for the Digital SAT</title>
 <style>
-:root{--bg:#f6f4ff;--card:#fff;--ink:#1d1b2e;--mut:#6b6880;--pri:#6c4cf5;--pri2:#a24cf5;--ok:#13a86b;--bad:#e5484d;--line:#e4e0f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12101f;--card:#1c1930;--ink:#efecff;--mut:#9c98b8;--line:#2f2b4a}}
-:root[data-theme="dark"]{--bg:#12101f;--card:#1c1930;--ink:#efecff;--mut:#9c98b8;--line:#2f2b4a}
-*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-.wrap{max-width:720px;margin:0 auto;padding:16px}
-header{background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;border-radius:20px;padding:24px 20px;margin-bottom:14px}
-header h1{margin:0 0 4px;font-size:1.6rem}header p{margin:0;opacity:.9}
-nav{display:flex;gap:8px;margin-bottom:14px}
-nav button{flex:1;padding:11px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;font-weight:600;font-size:.95rem;cursor:pointer}
-nav button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
-h2{margin:0 0 8px;font-size:1.15rem}h3{margin:0 0 6px;font-size:1rem}
-.tag{display:inline-block;background:var(--pri);color:#fff;border-radius:99px;font-size:.72rem;padding:2px 10px;margin-bottom:6px}
-.mut{color:var(--mut);font-size:.9rem}
-.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;font-size:1rem;cursor:pointer}
-.opt.ok{border-color:var(--ok);background:rgba(19,168,107,.14)}.opt.bad{border-color:var(--bad);background:rgba(229,72,77,.14)}
-.exp{margin-top:10px;padding:12px;border-radius:12px;background:rgba(108,76,245,.1);display:none}
-.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin:6px 0 12px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--pri2));transition:width .3s}
-.btn{padding:12px 18px;border:0;border-radius:12px;background:var(--pri);color:#fff;font-weight:600;font-size:1rem;cursor:pointer}
-.fc{perspective:800px;cursor:pointer;margin:10px 0}.fc div{min-height:130px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-size:1.25rem;font-weight:600}
-.fc .back{font-size:1rem;font-weight:400}
-ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
-.hide{display:none}
+:root{--paper:#faf8f3;--card:#ffffff;--ink:#1c2434;--mut:#5b6475;--navy:#1f3a5f;--wine:#8a2c3a;--line:#e0dccf;--ok:#1d7a4d;--bad:#b3261e;--tint:#eef2f8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7;font-size:17px}
+h1,h2,h3,nav,.ui,button,th{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--navy);color:#fff;padding:56px 20px 44px;text-align:center;border-bottom:4px solid var(--wine)}
+header .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;opacity:.8;font-family:system-ui,sans-serif}
+header h1{font-family:Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.8rem);margin:10px 0 8px;line-height:1.2}
+header p{max-width:620px;margin:0 auto;opacity:.92;font-style:italic}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:0 10px;justify-content:center}
+nav a{color:var(--navy);text-decoration:none;font-size:.88rem;font-weight:600;padding:16px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover,nav a.on{border-bottom-color:var(--wine);color:var(--wine)}
+main{max-width:800px;margin:0 auto;padding:12px 20px 60px}
+section{padding-top:36px}
+h2{font-size:1.5rem;color:var(--navy);margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+h2 .n{color:var(--wine);font-size:1rem;font-weight:700}
+.rule{height:2px;width:56px;background:var(--wine);margin:8px 0 18px}
+h3{font-size:1.05rem;color:var(--navy);margin:20px 0 6px}
+.abstract{background:var(--tint);border-left:4px solid var(--navy);padding:14px 18px;border-radius:0 8px 8px 0;font-style:italic}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(31,58,95,.05)}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+ol.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 56px;margin:10px 0;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ol.steps li:before{content:counter(s);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font:700 .95rem system-ui,sans-serif;display:flex;align-items:center;justify-content:center}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+.sig{color:var(--wine);font-style:italic}
+.call{border:1px solid var(--line);border-left:4px solid var(--wine);background:var(--card);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 12px}
+.btn{font-weight:600;font-size:.92rem;border:1.5px solid var(--navy);background:var(--navy);color:#fff;padding:9px 16px;border-radius:8px;cursor:pointer}
+.btn.alt{background:#fff;color:var(--navy)}
+.btn:hover{filter:brightness(1.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.w{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.w b{font-size:1.15rem;color:var(--navy)}.w .pos{font:italic .85rem Georgia,serif;color:var(--mut);margin-left:6px}
+.w .d{margin-top:6px;transition:opacity .2s}.hidden .d{opacity:0;cursor:pointer;background:var(--tint);border-radius:6px}
+.w .ex{font-size:.92rem;color:var(--mut);font-style:italic;margin-top:4px}
+.bar{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:8px 0 18px}.bar i{display:block;height:100%;width:0;background:var(--wine);transition:width .3s}
+.qh{font:600 .8rem system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wine)}
+.opt{display:block;width:100%;text-align:left;font:1rem Georgia,serif;margin:8px 0;padding:11px 14px;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--navy);background:var(--tint)}
+.opt.ok{border-color:var(--ok);background:#e8f5ee}.opt.bad{border-color:var(--bad);background:#fcebea}
+.exp{display:none;margin-top:12px;padding:12px 14px;background:var(--tint);border-radius:8px;font-size:.97rem}
+.score{font:700 2.4rem system-ui,sans-serif;color:var(--navy)}
+.rev{border-top:1px solid var(--line);padding:10px 0;font-size:.95rem}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.85rem;padding:24px 20px;font-style:italic}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header><h1>📘 Words in Context</h1><p>SAT Reading &amp; Writing • strateji, kelime kartları ve pratik</p></header>
-<nav><button class="on" data-t="learn">Öğren</button><button data-t="cards">Kartlar</button><button data-t="quiz">Pratik</button></nav>
+<header>
+<div class="eyebrow">Digital SAT · Reading &amp; Writing</div>
+<h1>Words in Context</h1>
+<p>A concise, evidence-based guide to reading vocabulary through its surrounding text, with a lexicon and original practice questions.</p>
+</header>
+<nav id="nav">
+<a href="#overview">Overview</a><a href="#method">Method</a><a href="#clues">Context Clues</a><a href="#pitfalls">Pitfalls</a><a href="#lexicon">Lexicon</a><a href="#practice">Practice</a>
+</nav>
+<main>
 
-<section id="learn">
-<div class="card"><span class="tag">Bu nedir?</span><h2>Soru tipi</h2>
-<p>Bir paragrafta boşluk bırakılır ya da altı çizili bir kelime verilir. En mantıklı, bağlama en uygun kelimeyi seçersin. Kelimeyi bilmek yetmez; <b>cümlenin yönünü</b> okumak gerekir.</p></div>
-<div class="card"><h2>4 adımlı yöntem</h2><ul>
-<li><b>1. Seçeneklere bakmadan oku.</b> Boşluğa kendi kelimeni koy ("olumlu mu, olumsuz mu?").</li>
-<li><b>2. İpuçlarını bul.</b> Metinde boşluğu tanımlayan bir örnek, zıtlık ya da neden-sonuç vardır.</li>
-<li><b>3. Elemeye başla.</b> Tonu veya anlamı uymayan seçenekleri at.</li>
-<li><b>4. Cümleye geri koy.</b> Kalan seçeneği yerine yerleştirip akıp akmadığını kontrol et.</li></ul></div>
-<div class="card"><h2>Bağlaç ipuçları</h2>
-<p><b>Zıtlık:</b> <i>but, although, though, however, yet, despite</i> → boşluk, önceki fikrin tersidir.</p>
-<p><b>Devam:</b> <i>and, moreover, because, thus, therefore</i> → boşluk, aynı yönde ilerler.</p>
-<p><b>İki nokta / tire:</b> sonrasında genelde tanım gelir; kelimenin anlamını orada ara.</p></div>
-<div class="card"><h2>Sık yapılan hatalar</h2><ul>
-<li>Bildiğin ama bağlama uymayan "havalı" kelimeyi seçmek.</li>
-<li>Kelimenin yaygın anlamına takılmak; çok anlamlı kelimelerde bağlama bak.</li>
-<li>Tonu kaçırmak (övgü mü eleştiri mi?).</li></ul></div>
+<section id="overview">
+<h2><span class="n">1</span>Overview</h2><div class="rule"></div>
+<p class="abstract">Words in Context questions ask you to select the word or phrase that best completes a short passage, or to determine the meaning of an underlined word as it is used. These items assess <em>precision of meaning</em>, not memorization: the correct answer is always the one the passage itself supports.</p>
+<p>Two formats appear most often. In a <b>completion</b> item, a blank must be filled with the most logical word. In a <b>meaning-in-context</b> item, a familiar word is used in a less common sense, and you must infer which sense the author intends.</p>
 </section>
 
-<section id="cards" class="hide">
-<div class="card"><span class="tag">Kelime kartı</span>
-<p class="mut" id="cnt"></p>
-<div class="fc" id="fc"><div id="face"></div></div>
-<p class="mut">Çevirmek için karta dokun.</p>
-<button class="btn" id="nx">Sonraki kart</button></div>
+<section id="method">
+<h2><span class="n">2</span>Method</h2><div class="rule"></div>
+<ol class="steps">
+<li><b>Predict before you read the options.</b> Cover the choices and supply your own word for the blank. Decide first whether its tone is positive, negative, or neutral.</li>
+<li><b>Locate the evidence.</b> Find the clue in the passage: a definition, an example, a contrast, or a cause-and-effect relationship.</li>
+<li><b>Eliminate systematically.</b> Remove options that conflict with the tone, the logic, or the evidence. Eliminating is often easier than selecting.</li>
+<li><b>Substitute and verify.</b> Place the remaining option into the sentence and confirm that it preserves the author's meaning and reads naturally.</li>
+</ol>
 </section>
 
-<section id="quiz" class="hide">
+<section id="clues">
+<h2><span class="n">3</span>Types of Context Clues</h2><div class="rule"></div>
+<div class="tw"><table>
+<tr><th>Clue type</th><th>Signal words</th><th>Example and reading</th></tr>
+<tr><td><b>Contrast</b></td><td class="sig">but, although, however, yet, despite, unlike</td><td>"Although the critic was usually <i>harsh</i>, her review was ______." The blank opposes "harsh," so a word such as <i>generous</i> fits.</td></tr>
+<tr><td><b>Continuation</b></td><td class="sig">and, moreover, similarly, likewise</td><td>The blank extends the preceding idea in the same direction and with the same tone.</td></tr>
+<tr><td><b>Cause and effect</b></td><td class="sig">because, thus, therefore, as a result</td><td>The blank must be a logical reason for, or consequence of, the stated outcome.</td></tr>
+<tr><td><b>Definition or example</b></td><td class="sig">colon, dash, "such as," "that is"</td><td>Material after a colon or dash usually explains the word directly. Read it as a definition.</td></tr>
+</table></div>
+<div class="call"><b>Rule of thumb.</b> A single transition word often decides the whole item. Identify whether the sentence changes direction or continues before considering any answer choice.</div>
+</section>
+
+<section id="pitfalls">
+<h2><span class="n">4</span>Common Pitfalls</h2><div class="rule"></div>
+<div class="card"><h3 style="margin-top:0">Choosing the impressive word</h3>Advanced vocabulary is attractive, but an elegant word that does not fit the evidence is wrong.</div>
+<div class="card"><h3 style="margin-top:0">Defaulting to the familiar sense</h3>For polysemous words (<i>bear, grasp, charge, subtle</i>), the intended sense is dictated by the sentence, not by the first definition that comes to mind.</div>
+<div class="card"><h3 style="margin-top:0">Ignoring tone</h3>Two options may share a general meaning yet differ in connotation (<i>frugal</i> vs. <i>stingy</i>). Match the author's attitude.</div>
+</section>
+
+<section id="lexicon">
+<h2><span class="n">5</span>Lexicon</h2><div class="rule"></div>
+<p>Twelve high-frequency words with definitions and illustrative sentences. Use self-test mode to recall each meaning before revealing it.</p>
+<div class="tools"><button class="btn alt" id="tg">Self-test mode: off</button></div>
+<div class="grid" id="lex"></div>
+</section>
+
+<section id="practice">
+<h2><span class="n">6</span>Practice</h2><div class="rule"></div>
+<p>Ten original questions modeled on the digital SAT format. Each answer includes a short rationale.</p>
 <div class="card"><div class="bar"><i id="pb"></i></div><div id="q"></div></div>
 </section>
-</div>
+
+</main>
+<footer>Original study material prepared for self-directed learning. Not affiliated with or endorsed by the College Board or UWorld.</footer>
 
 <script>
-const words=[
-["corroborate","doğrulamak, kanıtlarla desteklemek"],["spare","sade, süssüz (üslup)"],["tepid","ılık; isteksiz, heyecansız"],
-["precarious","sallantıda, kararsız, riskli"],["anomalous","normdan sapan, alışılmadık"],["restraint","ölçülülük, tutumluluk"],
-["disjointed","bağlantısız, kopuk"],["guarded","temkinli, dikkatli konuşan"],["ostentatious","gösterişli"],
-["candid","açık sözlü, samimi"],["undermine","altını oymak, zayıflatmak"],["ornate","süslü, bezemeli"]];
+const LEX=[
+["corroborate","v.","to confirm or support with evidence","Later experiments corroborated her hypothesis."],
+["spare","adj.","plain and economical; lacking ornament","The poet's spare style leaves little room for excess."],
+["tepid","adj.","lacking enthusiasm; lukewarm","The audience gave the proposal a tepid reception."],
+["precarious","adj.","dependent on chance; insecure","The colony's survival was precarious after the drought."],
+["anomalous","adj.","deviating from what is standard or expected","The anomalous result prompted a second trial."],
+["restraint","n.","moderation; control over one's impulses","The design is notable for its restraint."],
+["disjointed","adj.","lacking a coherent connection","Critics found the narrative disjointed."],
+["guarded","adj.","cautious; careful about revealing information","The diplomat gave guarded answers."],
+["ostentatious","adj.","designed to impress; showy","He avoided ostentatious displays of wealth."],
+["candid","adj.","truthful and straightforward","She offered a candid assessment of the data."],
+["undermine","v.","to weaken gradually or secretly","Inconsistent data can undermine a conclusion."],
+["ornate","adj.","elaborately decorated or complex","The manuscript was written in ornate script."]];
+const lex=document.getElementById("lex");
+lex.innerHTML=LEX.map(w=>`<div class="w"><b>${w[0]}</b><span class="pos">${w[1]}</span><div class="d">${w[2]}</div><div class="d ex">“${w[3]}”</div></div>`).join("");
+let st=false;const tg=document.getElementById("tg");
+tg.onclick=()=>{st=!st;tg.textContent="Self-test mode: "+(st?"on":"off");lex.querySelectorAll(".w").forEach(c=>c.classList.toggle("hidden",st))};
+lex.addEventListener("click",e=>{const c=e.target.closest(".w");if(st&&c)c.classList.remove("hidden")});
+
 const Q=[
-{t:"Initially, the scientist's findings were met with skepticism, but later experiments ______ her hypothesis, leaving few doubters.",o:["undermined","corroborated","obscured","postponed"],a:1,e:"\"Leaving few doubters\" ve \"but\" ipucu: sonraki deneyler hipotezi destekledi. <b>Corroborated</b> = doğruladı."},
-{t:"Although the author's early novels were praised for their ______ prose, her later work embraced a far more ornate style.",o:["spare","elaborate","florid","turbid"],a:0,e:"\"Although\" zıtlık kurar; sonrası \"ornate\" olduğu için ilki tersi olmalı: <b>spare</b> (sade)."},
-{t:"The mayor's ______ response to the crisis, delaying any action for weeks, frustrated residents.",o:["decisive","tepid","fervent","prompt"],a:1,e:"Haftalarca harekete geçmemek, isteksiz bir tepkiyi gösterir: <b>tepid</b>."},
-{t:"The botanist described the orchid's habitat as \"precarious,\" noting that a single drought could eliminate the entire population. As used in the text, \"precarious\" most nearly means",o:["unstable","remote","spacious","ancient"],a:0,e:"Tek bir kuraklık türü yok edebiliyorsa yaşam alanı kırılgandır: <b>unstable</b>."},
-{t:"Because the experiment's results were ______, other laboratories could not reproduce them, which cast doubt on the claim.",o:["replicable","anomalous","conclusive","redundant"],a:1,e:"Tekrar edilememesi sonuçların alışılmadık/sapmalı olduğunu gösterir: <b>anomalous</b>."},
-{t:"The architect's design was praised not for ostentation but for its ______: every element served a clear purpose.",o:["extravagance","restraint","novelty","fragility"],a:1,e:"\"Not for ostentation\" + iki nokta sonrası amaç odaklılık: <b>restraint</b> (ölçülülük)."},
-{t:"Critics found the film's plot ______: scenes ended abruptly, and characters vanished without explanation.",o:["cohesive","disjointed","intricate","predictable"],a:1,e:"İki nokta sonrası kopukluğu anlatır: <b>disjointed</b>."},
-{t:"The diplomat's ______ remarks, worded carefully to offend no one, revealed little about her country's true position.",o:["candid","guarded","inflammatory","verbose"],a:1,e:"Dikkatle seçilmiş ve az şey açığa çıkaran sözler: <b>guarded</b>."}
+{t:"Initially, the scientist's findings were met with skepticism, but later experiments ______ her hypothesis, leaving few doubters.",o:["undermined","corroborated","obscured","postponed"],a:1,e:"The contrast marker “but” and the phrase “leaving few doubters” show that the later experiments supported her claim. <b>Corroborated</b> means confirmed."},
+{t:"Although the author's early novels were praised for their ______ prose, her later work embraced a far more ornate style.",o:["spare","elaborate","florid","turbid"],a:0,e:"“Although” signals contrast with “ornate.” The blank therefore needs a word meaning plain: <b>spare</b>."},
+{t:"The mayor's ______ response to the crisis, delaying any action for weeks, frustrated residents.",o:["decisive","tepid","fervent","prompt"],a:1,e:"Delaying action for weeks indicates a lack of enthusiasm. <b>Tepid</b> fits; the other options imply urgency."},
+{t:"The botanist described the orchid's habitat as “precarious,” noting that a single drought could eliminate the entire population. As used in the text, “precarious” most nearly means",o:["unstable","remote","spacious","ancient"],a:0,e:"If one drought could destroy the population, the habitat is fragile and uncertain: <b>unstable</b>."},
+{t:"Because the experiment's results were ______, other laboratories could not reproduce them, which cast doubt on the claim.",o:["replicable","anomalous","conclusive","redundant"],a:1,e:"Results that others cannot reproduce are unusual or irregular. <b>Anomalous</b> is the logical consequence."},
+{t:"The architect's design was praised not for ostentation but for its ______: every element served a clear purpose.",o:["extravagance","restraint","novelty","fragility"],a:1,e:"“Not for ostentation” and the colon clause point to disciplined simplicity: <b>restraint</b>."},
+{t:"Critics found the film's plot ______: scenes ended abruptly, and characters vanished without explanation.",o:["cohesive","disjointed","intricate","predictable"],a:1,e:"The material after the colon defines the blank. Abrupt endings and vanishing characters describe a <b>disjointed</b> plot."},
+{t:"The diplomat's ______ remarks, worded carefully to offend no one, revealed little about her country's true position.",o:["candid","guarded","inflammatory","verbose"],a:1,e:"Carefully worded remarks that reveal little are <b>guarded</b>. “Candid” would contradict the evidence."},
+{t:"The historian cautioned that the diary, though vivid, should be read ______, since its author had a clear stake in how the events were remembered.",o:["credulously","warily","casually","aloud"],a:1,e:"An author with a personal stake may distort events, so the source should be read with caution: <b>warily</b>."},
+{t:"Far from being ______, the committee's recommendations drew on a decade of carefully gathered data.",o:["capricious","systematic","thorough","rigorous"],a:0,e:"“Far from being” introduces the opposite of data-driven work. <b>Capricious</b> means arbitrary or impulsive; the other options would repeat the idea rather than oppose it."}
 ];
-// tabs
-document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
- document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));
- ["learn","cards","quiz"].forEach(id=>document.getElementById(id).classList.toggle("hide",id!==b.dataset.t));
-});
-// flashcards
-let ci=0,flip=false;
-function card(){const w=words[ci];const f=document.getElementById("face");
- f.className=flip?"back":"";f.textContent=flip?w[1]:w[0];
- document.getElementById("cnt").textContent=(ci+1)+" / "+words.length}
-document.getElementById("fc").onclick=()=>{flip=!flip;card()};
-document.getElementById("nx").onclick=()=>{ci=(ci+1)%words.length;flip=false;card()};
-card();
-// quiz
-let qi=0,score=0,done=false;
+let qi=0,score=0,locked=false,missed=[];
+const box=document.getElementById("q"),pb=document.getElementById("pb");
 function show(){
- const box=document.getElementById("q");
- document.getElementById("pb").style.width=(qi/Q.length*100)+"%";
- if(qi>=Q.length){box.innerHTML="<h2>Bitti! 🎉</h2><p>Skor: <b>"+score+" / "+Q.length+"</b></p><p class='mut'>"+(score>=7?"Harika, bağlam okuma becerin güçlü.":score>=4?"İyi gidiyorsun; yanlışların açıklamalarını tekrar oku.":"Strateji sekmesine dönüp 4 adımı tekrar dene.")+"</p><button class='btn' id='rs'>Tekrar dene</button>";
-  document.getElementById("rs").onclick=()=>{qi=0;score=0;show()};return}
- done=false;const q=Q[qi];
- box.innerHTML="<span class='tag'>Soru "+(qi+1)+"/"+Q.length+"</span><p>"+q.t+"</p>"+q.o.map((x,i)=>"<button class='opt' data-i='"+i+"'>"+"ABCD"[i]+") "+x+"</button>").join("")+"<div class='exp' id='ex'>"+q.e+"</div><p><button class='btn hide' id='nq'>Devam</button></p>";
+ pb.style.width=(qi/Q.length*100)+"%";
+ if(qi>=Q.length){
+  const pct=Math.round(score/Q.length*100);
+  box.innerHTML=`<div class="qh">Results</div><div class="score">${score} / ${Q.length} <span style="font-size:1rem;color:var(--mut)">(${pct}%)</span></div><p>${pct>=80?"Excellent command of contextual meaning.":pct>=50?"Solid foundation. Review the items below and revisit the method.":"Return to the Method and Context Clues sections, then try again."}</p>`+
+  (missed.length?`<h3>Review of missed items</h3>`+missed.map(m=>`<div class="rev"><b>Q${m+1}.</b> ${Q[m].t}<br><span style="color:var(--ok)">Correct: ${Q[m].o[Q[m].a]}</span><br>${Q[m].e}</div>`).join(""):"<p><b>No missed items.</b></p>")+
+  `<p><button class="btn" id="rs">Retake</button></p>`;
+  document.getElementById("rs").onclick=()=>{qi=0;score=0;missed=[];show()};return}
+ locked=false;const q=Q[qi];
+ box.innerHTML=`<div class="qh">Question ${qi+1} of ${Q.length}</div><p>${q.t}</p>`+q.o.map((x,i)=>`<button class="opt" data-i="${i}"><b>${"ABCD"[i]}.</b> ${x}</button>`).join("")+`<div class="exp" id="ex"><b>Rationale.</b> ${q.e}</div><p><button class="btn" id="nq" style="display:none">${qi===Q.length-1?"See results":"Next question"}</button></p>`;
  box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
-  if(done)return;done=true;const i=+b.dataset.i;
-  if(i===q.a)score++;
-  box.querySelectorAll(".opt").forEach((x,j)=>{if(j===q.a)x.classList.add("ok");else if(j===i)x.classList.add("bad")});
+  if(locked)return;locked=true;const i=+b.dataset.i;
+  if(i===q.a)score++;else missed.push(qi);
+  box.querySelectorAll(".opt").forEach((x,j)=>{x.disabled=true;if(j===q.a)x.classList.add("ok");else if(j===i)x.classList.add("bad")});
   document.getElementById("ex").style.display="block";
-  const n=document.getElementById("nq");n.classList.remove("hide");n.onclick=()=>{qi++;show()};
+  const n=document.getElementById("nq");n.style.display="inline-block";n.onclick=()=>{qi++;show();if(qi<Q.length)document.getElementById("practice").scrollIntoView()};
  });
 }
 show();
+// active nav highlight
+const links=[...document.querySelectorAll("#nav a")];
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-30% 0px -60% 0px"});
+document.querySelectorAll("section").forEach(s=>obs.observe(s));
 </script>
 </body>
 </html>
