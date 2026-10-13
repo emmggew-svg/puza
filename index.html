@@ -1,179 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<title>Words in Context: A Study Guide for the Digital SAT</title>
+<title>Inferences 1 – Sorular</title>
 <style>
-:root{--paper:#faf8f3;--card:#ffffff;--ink:#1c2434;--mut:#5b6475;--navy:#1f3a5f;--wine:#8a2c3a;--line:#e0dccf;--ok:#1d7a4d;--bad:#b3261e;--tint:#eef2f8}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:64px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7;font-size:17px}
-h1,h2,h3,nav,.ui,button,th{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{background:var(--navy);color:#fff;padding:56px 20px 44px;text-align:center;border-bottom:4px solid var(--wine)}
-header .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;opacity:.8;font-family:system-ui,sans-serif}
-header h1{font-family:Georgia,serif;font-weight:700;font-size:clamp(1.8rem,5vw,2.8rem);margin:10px 0 8px;line-height:1.2}
-header p{max-width:620px;margin:0 auto;opacity:.92;font-style:italic}
-nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:0 10px;justify-content:center}
-nav a{color:var(--navy);text-decoration:none;font-size:.88rem;font-weight:600;padding:16px 12px;white-space:nowrap;border-bottom:3px solid transparent}
-nav a:hover,nav a.on{border-bottom-color:var(--wine);color:var(--wine)}
-main{max-width:800px;margin:0 auto;padding:12px 20px 60px}
-section{padding-top:36px}
-h2{font-size:1.5rem;color:var(--navy);margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
-h2 .n{color:var(--wine);font-size:1rem;font-weight:700}
-.rule{height:2px;width:56px;background:var(--wine);margin:8px 0 18px}
-h3{font-size:1.05rem;color:var(--navy);margin:20px 0 6px}
-.abstract{background:var(--tint);border-left:4px solid var(--navy);padding:14px 18px;border-radius:0 8px 8px 0;font-style:italic}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(31,58,95,.05)}
-ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
-ol.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 56px;margin:10px 0;background:var(--card);border:1px solid var(--line);border-radius:10px}
-ol.steps li:before{content:counter(s);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font:700 .95rem system-ui,sans-serif;display:flex;align-items:center;justify-content:center}
-.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
-th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
-td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
-.sig{color:var(--wine);font-style:italic}
-.call{border:1px solid var(--line);border-left:4px solid var(--wine);background:var(--card);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0}
-.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 12px}
-.btn{font-weight:600;font-size:.92rem;border:1.5px solid var(--navy);background:var(--navy);color:#fff;padding:9px 16px;border-radius:8px;cursor:pointer}
-.btn.alt{background:#fff;color:var(--navy)}
-.btn:hover{filter:brightness(1.08)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-.w{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.w b{font-size:1.15rem;color:var(--navy)}.w .pos{font:italic .85rem Georgia,serif;color:var(--mut);margin-left:6px}
-.w .d{margin-top:6px;transition:opacity .2s}.hidden .d{opacity:0;cursor:pointer;background:var(--tint);border-radius:6px}
-.w .ex{font-size:.92rem;color:var(--mut);font-style:italic;margin-top:4px}
-.bar{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:8px 0 18px}.bar i{display:block;height:100%;width:0;background:var(--wine);transition:width .3s}
-.qh{font:600 .8rem system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wine)}
-.opt{display:block;width:100%;text-align:left;font:1rem Georgia,serif;margin:8px 0;padding:11px 14px;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;cursor:pointer}
-.opt:hover:not(:disabled){border-color:var(--navy);background:var(--tint)}
-.opt.ok{border-color:var(--ok);background:#e8f5ee}.opt.bad{border-color:var(--bad);background:#fcebea}
-.exp{display:none;margin-top:12px;padding:12px 14px;background:var(--tint);border-radius:8px;font-size:.97rem}
-.score{font:700 2.4rem system-ui,sans-serif;color:var(--navy)}
-.rev{border-top:1px solid var(--line);padding:10px 0;font-size:.95rem}
-footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.85rem;padding:24px 20px;font-style:italic}
+  body{font-family:Georgia,serif;max-width:760px;margin:0 auto;padding:16px;background:#f6f6f4;color:#1a1a1a;line-height:1.55}
+  h1{font-size:1.4rem;margin:8px 0 4px}
+  .sub{color:#666;font-size:.9rem;margin-bottom:20px;font-family:system-ui,sans-serif}
+  .q{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px;margin-bottom:18px}
+  .num{font-family:system-ui,sans-serif;font-weight:700;font-size:.85rem;color:#fff;background:#111;border-radius:4px;padding:2px 8px;display:inline-block;margin-bottom:8px}
+  .passage{margin:6px 0 12px;text-align:justify}
+  .ask{font-family:system-ui,sans-serif;font-weight:700;margin:10px 0}
+  .opt{display:flex;gap:10px;align-items:flex-start;border:1px solid #ccc;border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;font-family:system-ui,sans-serif;font-size:.95rem}
+  .opt:hover{background:#f0f0f0}
+  .opt.sel{border-color:#1a56db;background:#e8f0fe}
+  .opt b{color:#9b1c1c;min-width:16px}
+  .opt.cross{opacity:.45;text-decoration:line-through}
+  .hint{font-size:.75rem;color:#888;font-family:system-ui,sans-serif}
+  .reset{font-family:system-ui,sans-serif;padding:8px 14px;border:1px solid #999;background:#fff;border-radius:6px;cursor:pointer}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:14px 0;font-family:system-ui,sans-serif}
+  .nav button{padding:10px 18px;border:0;border-radius:8px;background:#9b1c1c;color:#fff;font-weight:600;cursor:pointer;font-size:.95rem}
+  .nav button:disabled{background:#bbb;cursor:default}
+  .dots{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0 16px;font-family:system-ui,sans-serif}
+  .dot{width:32px;height:32px;border-radius:6px;border:1px solid #bbb;background:#fff;cursor:pointer;font-weight:600}
+  .dot.cur{background:#111;color:#fff;border-color:#111}
+  .dot.done{background:#e8f0fe;border-color:#1a56db}
+  .dot.cur.done{background:#1a56db;border-color:#1a56db;color:#fff}
+  .counter{font-size:.9rem;color:#444}
 </style>
 </head>
 <body>
-<header>
-<div class="eyebrow">Digital SAT · Reading &amp; Writing</div>
-<h1>Words in Context</h1>
-<p>A concise, evidence-based guide to reading vocabulary through its surrounding text, with a lexicon and original practice questions.</p>
-</header>
-<nav id="nav">
-<a href="#overview">Overview</a><a href="#method">Method</a><a href="#clues">Context Clues</a><a href="#pitfalls">Pitfalls</a><a href="#lexicon">Lexicon</a><a href="#practice">Practice</a>
-</nav>
-<main>
-
-<section id="overview">
-<h2><span class="n">1</span>Overview</h2><div class="rule"></div>
-<p class="abstract">Words in Context questions ask you to select the word or phrase that best completes a short passage, or to determine the meaning of an underlined word as it is used. These items assess <em>precision of meaning</em>, not memorization: the correct answer is always the one the passage itself supports.</p>
-<p>Two formats appear most often. In a <b>completion</b> item, a blank must be filled with the most logical word. In a <b>meaning-in-context</b> item, a familiar word is used in a less common sense, and you must infer which sense the author intends.</p>
-</section>
-
-<section id="method">
-<h2><span class="n">2</span>Method</h2><div class="rule"></div>
-<ol class="steps">
-<li><b>Predict before you read the options.</b> Cover the choices and supply your own word for the blank. Decide first whether its tone is positive, negative, or neutral.</li>
-<li><b>Locate the evidence.</b> Find the clue in the passage: a definition, an example, a contrast, or a cause-and-effect relationship.</li>
-<li><b>Eliminate systematically.</b> Remove options that conflict with the tone, the logic, or the evidence. Eliminating is often easier than selecting.</li>
-<li><b>Substitute and verify.</b> Place the remaining option into the sentence and confirm that it preserves the author's meaning and reads naturally.</li>
-</ol>
-</section>
-
-<section id="clues">
-<h2><span class="n">3</span>Types of Context Clues</h2><div class="rule"></div>
-<div class="tw"><table>
-<tr><th>Clue type</th><th>Signal words</th><th>Example and reading</th></tr>
-<tr><td><b>Contrast</b></td><td class="sig">but, although, however, yet, despite, unlike</td><td>"Although the critic was usually <i>harsh</i>, her review was ______." The blank opposes "harsh," so a word such as <i>generous</i> fits.</td></tr>
-<tr><td><b>Continuation</b></td><td class="sig">and, moreover, similarly, likewise</td><td>The blank extends the preceding idea in the same direction and with the same tone.</td></tr>
-<tr><td><b>Cause and effect</b></td><td class="sig">because, thus, therefore, as a result</td><td>The blank must be a logical reason for, or consequence of, the stated outcome.</td></tr>
-<tr><td><b>Definition or example</b></td><td class="sig">colon, dash, "such as," "that is"</td><td>Material after a colon or dash usually explains the word directly. Read it as a definition.</td></tr>
-</table></div>
-<div class="call"><b>Rule of thumb.</b> A single transition word often decides the whole item. Identify whether the sentence changes direction or continues before considering any answer choice.</div>
-</section>
-
-<section id="pitfalls">
-<h2><span class="n">4</span>Common Pitfalls</h2><div class="rule"></div>
-<div class="card"><h3 style="margin-top:0">Choosing the impressive word</h3>Advanced vocabulary is attractive, but an elegant word that does not fit the evidence is wrong.</div>
-<div class="card"><h3 style="margin-top:0">Defaulting to the familiar sense</h3>For polysemous words (<i>bear, grasp, charge, subtle</i>), the intended sense is dictated by the sentence, not by the first definition that comes to mind.</div>
-<div class="card"><h3 style="margin-top:0">Ignoring tone</h3>Two options may share a general meaning yet differ in connotation (<i>frugal</i> vs. <i>stingy</i>). Match the author's attitude.</div>
-</section>
-
-<section id="lexicon">
-<h2><span class="n">5</span>Lexicon</h2><div class="rule"></div>
-<p>Twelve high-frequency words with definitions and illustrative sentences. Use self-test mode to recall each meaning before revealing it.</p>
-<div class="tools"><button class="btn alt" id="tg">Self-test mode: off</button></div>
-<div class="grid" id="lex"></div>
-</section>
-
-<section id="practice">
-<h2><span class="n">6</span>Practice</h2><div class="rule"></div>
-<p>Ten original questions modeled on the digital SAT format. Each answer includes a short rationale.</p>
-<div class="card"><div class="bar"><i id="pb"></i></div><div id="q"></div></div>
-</section>
-
-</main>
-<footer>Original study material prepared for self-directed learning. Not affiliated with or endorsed by the College Board or UWorld.</footer>
+<h1>Inferences 1</h1>
+<div class="sub">Which choice most logically completes the text? · Şıkka tıkla = seç, tekrar tıkla = kaldır, çift tıkla = üstünü çiz.</div>
+<div class="dots" id="dots"></div>
+<div id="app"></div>
+<div class="nav">
+  <button id="prev" onclick="go(-1)">Previous</button>
+  <span class="counter" id="counter"></span>
+  <button id="next" onclick="go(1)">Next</button>
+</div>
+<button class="reset" onclick="resetAll()">Tümünü sıfırla</button>
 
 <script>
-const LEX=[
-["corroborate","v.","to confirm or support with evidence","Later experiments corroborated her hypothesis."],
-["spare","adj.","plain and economical; lacking ornament","The poet's spare style leaves little room for excess."],
-["tepid","adj.","lacking enthusiasm; lukewarm","The audience gave the proposal a tepid reception."],
-["precarious","adj.","dependent on chance; insecure","The colony's survival was precarious after the drought."],
-["anomalous","adj.","deviating from what is standard or expected","The anomalous result prompted a second trial."],
-["restraint","n.","moderation; control over one's impulses","The design is notable for its restraint."],
-["disjointed","adj.","lacking a coherent connection","Critics found the narrative disjointed."],
-["guarded","adj.","cautious; careful about revealing information","The diplomat gave guarded answers."],
-["ostentatious","adj.","designed to impress; showy","He avoided ostentatious displays of wealth."],
-["candid","adj.","truthful and straightforward","She offered a candid assessment of the data."],
-["undermine","v.","to weaken gradually or secretly","Inconsistent data can undermine a conclusion."],
-["ornate","adj.","elaborately decorated or complex","The manuscript was written in ornate script."]];
-const lex=document.getElementById("lex");
-lex.innerHTML=LEX.map(w=>`<div class="w"><b>${w[0]}</b><span class="pos">${w[1]}</span><div class="d">${w[2]}</div><div class="d ex">“${w[3]}”</div></div>`).join("");
-let st=false;const tg=document.getElementById("tg");
-tg.onclick=()=>{st=!st;tg.textContent="Self-test mode: "+(st?"on":"off");lex.querySelectorAll(".w").forEach(c=>c.classList.toggle("hidden",st))};
-lex.addEventListener("click",e=>{const c=e.target.closest(".w");if(st&&c)c.classList.remove("hidden")});
-
-const Q=[
-{t:"Initially, the scientist's findings were met with skepticism, but later experiments ______ her hypothesis, leaving few doubters.",o:["undermined","corroborated","obscured","postponed"],a:1,e:"The contrast marker “but” and the phrase “leaving few doubters” show that the later experiments supported her claim. <b>Corroborated</b> means confirmed."},
-{t:"Although the author's early novels were praised for their ______ prose, her later work embraced a far more ornate style.",o:["spare","elaborate","florid","turbid"],a:0,e:"“Although” signals contrast with “ornate.” The blank therefore needs a word meaning plain: <b>spare</b>."},
-{t:"The mayor's ______ response to the crisis, delaying any action for weeks, frustrated residents.",o:["decisive","tepid","fervent","prompt"],a:1,e:"Delaying action for weeks indicates a lack of enthusiasm. <b>Tepid</b> fits; the other options imply urgency."},
-{t:"The botanist described the orchid's habitat as “precarious,” noting that a single drought could eliminate the entire population. As used in the text, “precarious” most nearly means",o:["unstable","remote","spacious","ancient"],a:0,e:"If one drought could destroy the population, the habitat is fragile and uncertain: <b>unstable</b>."},
-{t:"Because the experiment's results were ______, other laboratories could not reproduce them, which cast doubt on the claim.",o:["replicable","anomalous","conclusive","redundant"],a:1,e:"Results that others cannot reproduce are unusual or irregular. <b>Anomalous</b> is the logical consequence."},
-{t:"The architect's design was praised not for ostentation but for its ______: every element served a clear purpose.",o:["extravagance","restraint","novelty","fragility"],a:1,e:"“Not for ostentation” and the colon clause point to disciplined simplicity: <b>restraint</b>."},
-{t:"Critics found the film's plot ______: scenes ended abruptly, and characters vanished without explanation.",o:["cohesive","disjointed","intricate","predictable"],a:1,e:"The material after the colon defines the blank. Abrupt endings and vanishing characters describe a <b>disjointed</b> plot."},
-{t:"The diplomat's ______ remarks, worded carefully to offend no one, revealed little about her country's true position.",o:["candid","guarded","inflammatory","verbose"],a:1,e:"Carefully worded remarks that reveal little are <b>guarded</b>. “Candid” would contradict the evidence."},
-{t:"The historian cautioned that the diary, though vivid, should be read ______, since its author had a clear stake in how the events were remembered.",o:["credulously","warily","casually","aloud"],a:1,e:"An author with a personal stake may distort events, so the source should be read with caution: <b>warily</b>."},
-{t:"Far from being ______, the committee's recommendations drew on a decade of carefully gathered data.",o:["capricious","systematic","thorough","rigorous"],a:0,e:"“Far from being” introduces the opposite of data-driven work. <b>Capricious</b> means arbitrary or impulsive; the other options would repeat the idea rather than oppose it."}
+const Q = [
+{p:"The Nacional tree is a rare variety of cacao. Nacionals were thought to have gone extinct by the twentieth century due to a fungus. This fungus can spread from tree to nearby tree through the air and causes disease. But around 2013, cacao expert Servio Pachard located some of these Nacional trees. The trees were in the Piedra de Plata coastal forest, within a hard-to-reach valley in Ecuador. Conservationists inferred that the Nacional trees in Piedra de Plata might have avoided the diseases that wiped out the other Nacionals because",
+ o:["early twentieth-century scientists did not know why so many Nacionals were becoming infected.","the ability of the fungus to travel through the air was only recently discovered.","they were too far from the other Nacional trees infected by the fungus to become infected themselves.","the chocolate made from their pods was highly valued."]},
+{p:"Bengali author and activist Rokeya Sakhawat Hossain, better known as Begum Rokeya, is widely regarded as a pioneer of women's liberation in South Asia. She established the first school aimed primarily at Muslim girls in Kolkata, India, and founded the Muslim Women's Association, which fought for women's education and employment. These accomplishments most strongly imply that",
+ o:["Rokeya moved to Kolkata because it offered a multitude of opportunities for women.","Rokeya was educated at an institution similar to the one she would later establish.","Rokeya believed education to be an important component of women's liberation.","Rokeya was disheartened at the lack of employment opportunities for women in India."]},
+{p:"Individualism is a moral stance and political philosophy that emphasizes the intrinsic worth of the individual. The term has been used both positively and negatively throughout history. For example, Welsh textile manufacturer Robert Owen used the word individualism as an insult, as he believed that cooperation, rather than individual desires, was the key to a successful society. Conversely, British journalist James Elishama Smith argued that without individualism, the moments of genius that have improved the quality of life for all of humanity would not be possible. Smith's argument suggests that",
+ o:["morality is a complicated topic best left to philosophers rather than businessmen.","Owen was correct to be wary of individualism, as it often hinders genius.","the philosophy of individualism may not be wholly detrimental to societal progress.","the word individualism causes too much confusion and must be replaced with a more precise term."]},
+{p:"First published in 1896, the <i>International Cloud Atlas</i> is a pictorial key for the nomenclature, or naming, of clouds. The initial purpose of the <i>Atlas</i> was to train meteorologists and promote consistent vocabulary terms for describing clouds across the weather forecast industry. In later years, the illustrations of cloud types that would appear in the <i>Atlas</i> were so beautiful that laypeople would purchase a copy of the book for their own enjoyment. This expansion in ownership of the <i>Atlas</i> most directly implies that",
+ o:["the publication has focused more on beautiful illustrations than on cloud nomenclature.","the publication is valued by an audience separate from the publication's original target group.","laypeople have become more interested in the promotion of consistent cloud nomenclature.","laypeople can accurately forecast the weather by learning from the International Cloud Atlas."]},
+{p:"To gain insight into the effects of prescription medication, Dr. Amjay Gordon asked for help from a medical examiner, who provided Gordon and her team with sixty-two different examples of individuals who had died of prescription drug overdoses. Using the documentation, particularly past medical histories and toxicology reports, Gordon's team found that accidental mixed drug toxicity accounted for 78% of the deaths, of which 83% included at least one prescription drug. Additionally, 79% of the mixed drug toxicity deaths had been caused by one specific combination—fentanyl (a prescription opioid) and heroin. These statistics imply that",
+ o:["doctors and medical examiners should collaborate more frequently to better understand the proper administration of prescription drugs.","a combination of two or more drugs can have unintended consequences for the body.","even if one of the drugs is prescribed by a doctor.","doctors should cease the prescription of fentanyl completely until Dr. Gordon's work is verified by an outside party."]},
+{p:"Dr. Moshe Nagari of the Hebrew University of Jerusalem has made a career of studying when, how, and why animals sleep. One of his hypotheses was that like humans, animals must sometimes sacrifice shut-eye when they've got important work to do—such as tending to their young. Nagari focused his attention on bumblebee colonies. In these colonies, a queen lays the eggs, and worker bees called nurses care for the resulting hatchlings. Nagari placed nurse bees in an enclosure with larvae, a developmental bee stage that requires constant feeding. The nurse bees slept significantly less than did bees who did not have larvae to care for. This finding suggests that",
+ o:["the role of the nurse bees in the colony was exclusively to feed new hatchlings.","the nurse bees' sleep was shorter when caring for the larvae but longer once the larvae had developed.","the observed sleep patterns of the nurse bees were consistent with the hypothesis made by Nagari.","the nurse bees slept less due to their desire to protect the larvae from harm rather than for feeding purposes."]},
+{p:"According to exercise psychologist Brett Gordon at the Penn State College of Medicine, while medication is an effective treatment for depression, patients should not overlook the impact of physical activity. Unlike medication, which can take weeks or months to take effect, the boon to one's mood from exercise is nearly immediate. Gordon also notes an additional benefit of exercise as mental health therapy: since a common side effect of depression is weight gain, the exercise can counteract that side effect. The fact that other psychologists are beginning to prescribe daily exercise along with traditional medications, therefore,",
+ o:["reveals that the field of psychology is beginning to debate whether medication should still be used to treat depression.","provides evidence that at least some other mental health professionals agree with Gordon's philosophy.","encourages Gordon to expand the scope of his message beyond his colleagues at Penn State.","demonstrates the beginning of a trend towards a societal synthesis of physical and mental health advice."]},
+{p:"Throughout human history, each culture has developed its own specific set of funerary rituals. Many people believe that the life or essence or spirit of an individual extends in some form beyond death, and the way in which people are laid to rest often reflects how different groups envision this unseen world after life. A wide variety of ancient peoples developed elaborate ceremonies to mark this transition to the afterlife, including placing both valuable materials (such as gold) and practical items (such as food offerings) in the spot of burial to assist the departed on their journey through the afterlife. Therefore, ancient peoples",
+ o:["may have believed that the materials and items would be beneficial in the afterlife.","were frightened that evil spirits would steal these offerings from their loved ones.","practiced these formal rites to help survivors forget about the person who died.","conducted these rituals to come to terms with their own eventual deaths."]},
+{p:"A company that can be purchased with little need for restructuring is called a turnkey company, which is appealing to potential buyers. For example, a fully-functioning and profitable sandwich franchise whose owner simply wants to pass off the business and retire would qualify as a turnkey company. Conversely, a boat repair business that has no working machines and minimal staff is not a turnkey company, because",
+ o:["investors who are interested in sandwich franchises have no interest in boat repair shops.","it likely has substantial debts, which have prevented it from repairing its machines.","it will require a substantial amount of work to become profitable for a new owner.","boats are generally considered unprofitable investments by their owners."]},
+{p:"Nepalese musician Sajjan Raj Vaidya attributes his love of music to his family. According to Vaidya, his mother taught him how to sing, his father taught him how to listen to music, and his brother helped him evolve his understanding of composition. One of Vaidya's most popular projects is “Katha”, a video series that features both an acoustic rendition of a song and a discussion of the song's origin and composition. This information suggests that",
+ o:["in Nepal, Vaidya is celebrated as a revolutionary artist.","Vaidya's family often performs with him on stage when he is touring.","Vaidya has extensive training in videography as well as music.","an aspect of Vaidya's music education is featured in one of his works."]}
 ];
-let qi=0,score=0,locked=false,missed=[];
-const box=document.getElementById("q"),pb=document.getElementById("pb");
-function show(){
- pb.style.width=(qi/Q.length*100)+"%";
- if(qi>=Q.length){
-  const pct=Math.round(score/Q.length*100);
-  box.innerHTML=`<div class="qh">Results</div><div class="score">${score} / ${Q.length} <span style="font-size:1rem;color:var(--mut)">(${pct}%)</span></div><p>${pct>=80?"Excellent command of contextual meaning.":pct>=50?"Solid foundation. Review the items below and revisit the method.":"Return to the Method and Context Clues sections, then try again."}</p>`+
-  (missed.length?`<h3>Review of missed items</h3>`+missed.map(m=>`<div class="rev"><b>Q${m+1}.</b> ${Q[m].t}<br><span style="color:var(--ok)">Correct: ${Q[m].o[Q[m].a]}</span><br>${Q[m].e}</div>`).join(""):"<p><b>No missed items.</b></p>")+
-  `<p><button class="btn" id="rs">Retake</button></p>`;
-  document.getElementById("rs").onclick=()=>{qi=0;score=0;missed=[];show()};return}
- locked=false;const q=Q[qi];
- box.innerHTML=`<div class="qh">Question ${qi+1} of ${Q.length}</div><p>${q.t}</p>`+q.o.map((x,i)=>`<button class="opt" data-i="${i}"><b>${"ABCD"[i]}.</b> ${x}</button>`).join("")+`<div class="exp" id="ex"><b>Rationale.</b> ${q.e}</div><p><button class="btn" id="nq" style="display:none">${qi===Q.length-1?"See results":"Next question"}</button></p>`;
- box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
-  if(locked)return;locked=true;const i=+b.dataset.i;
-  if(i===q.a)score++;else missed.push(qi);
-  box.querySelectorAll(".opt").forEach((x,j)=>{x.disabled=true;if(j===q.a)x.classList.add("ok");else if(j===i)x.classList.add("bad")});
-  document.getElementById("ex").style.display="block";
-  const n=document.getElementById("nq");n.style.display="inline-block";n.onclick=()=>{qi++;show();if(qi<Q.length)document.getElementById("practice").scrollIntoView()};
- });
+const L="ABCD";
+let state=JSON.parse(localStorage.getItem("inf1")||"{}");
+function save(){try{localStorage.setItem("inf1",JSON.stringify(state))}catch(e){}}
+let cur=0;
+function go(d){cur=Math.max(0,Math.min(Q.length-1,cur+d));render();window.scrollTo(0,0)}
+function jump(i){cur=i;render();window.scrollTo(0,0)}
+function render(){
+  const i=cur,q=Q[i];
+  document.getElementById("app").innerHTML=`
+  <div class="q"><span class="num">${i+1}</span>
+  <div class="passage">${q.p} ______</div>
+  <div class="ask">Which choice most logically completes the text?</div>
+  ${q.o.map((t,j)=>`<div class="opt ${state[i]===j?'sel':''} ${(state['x'+i]||[]).includes(j)?'cross':''}" onclick="pick(${i},${j})" ondblclick="cross(${i},${j})"><b>${L[j]}</b><span>${t}</span></div>`).join("")}
+  </div>`;
+  document.getElementById("dots").innerHTML=Q.map((_,k)=>`<button class="dot ${k===cur?'cur':''} ${state[k]!==undefined?'done':''}" onclick="jump(${k})">${k+1}</button>`).join("");
+  document.getElementById("counter").textContent=`Question ${i+1} of ${Q.length}`;
+  document.getElementById("prev").disabled=i===0;
+  document.getElementById("next").disabled=i===Q.length-1;
 }
-show();
-// active nav highlight
-const links=[...document.querySelectorAll("#nav a")];
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-30% 0px -60% 0px"});
-document.querySelectorAll("section").forEach(s=>obs.observe(s));
+function pick(i,j){state[i]=state[i]===j?undefined:j;save();render()}
+function cross(i,j){const k='x'+i;let a=state[k]||[];a=a.includes(j)?a.filter(x=>x!==j):[...a,j];state[k]=a;save();render()}
+function resetAll(){state={};save();render()}
+render();
 </script>
 </body>
 </html>
